@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>表面整治</string>
+	<string>表面排水孔道</string>
+	<string>爆破炸鱼采石取土</string>
+	<string>重物堆放</string>
+	<string>错位</string>
+	<string>渗水（伸缩缝）</string>
+	<string>沥青井</string>
+	<string>状况</string>
+	<string>渗水（裂缝）</string>
+	<string>工况</string>
+	<string>渗漏量</string>
+	<string>水透明度</string>
+	<string>溶蚀</string>
+	<string>冻融损坏</string>
+	<string>磨损</string>
+	<string>空蚀</string>
+	<string>碳化</string>
+	<string>钢筋锈蚀</string>
+	<string>闸门漏水</string>
+	<string>变形观测标点</string>
+	<string>扬压力观测孔</string>
+	<string>量水堰</string>
+	<string>应力观测电缆</string>
+	<string>观测房</string>
+	<string>其他</string>
+</array>
+</plist>

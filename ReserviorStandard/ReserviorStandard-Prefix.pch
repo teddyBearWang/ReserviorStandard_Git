@@ -14,3 +14,42 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+
+//整个屏幕的宽和高
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#import "Res.h"
+
+//定义启闭机类型结构体
+typedef enum kHoistType{
+    kFixedHoistType = 0, //固定式启闭机
+    kSpiralHoistType = 1, //螺旋式启闭机
+    kHydraulichoistType = 2, //液压式启闭机
+}kHoistType;
+
+
+//定义闸门类型结构体
+typedef enum kGateType
+{
+    kDamSteelGateType = 0, //大坝弧形钢闸门
+    kFirstPowerFlantType = 1, //一级电厂进口钢闸门
+    kSecondPowerFlantType = 2, //二级电厂进口钢闸门
+}kGateType;
+
+//定义已上报类型结构体
+typedef enum KReportedType
+{
+    kDamReportedType = 0, //大坝上报
+    kDamHoistReportedType = 1, //大坝启闭机
+    kFirstPowerHoistReportedType = 2, // 一级电厂启闭机
+    kSecondPowerHoistReportedType = 3, //二级电厂启闭机
+    kDamGateReportedType = 4, //大坝钢闸门
+    kFirstPowerGateReportedType = 5, // 一级电厂钢闸门
+    kSecondPowerGateReportedType = 6, // 二级电厂钢闸门
+} KReportedType;
+
+#define WEB_SERVER @"http://122.226.205.102/sfskbzhMobileServ/Data_Ys.ashx"
+#define _AppVer @"1.2"
+
+//#define WEB_LIN_SERVER @"http://115.236.2.245:801/sfskbzhMobileServ/Data_Ys.ashx"

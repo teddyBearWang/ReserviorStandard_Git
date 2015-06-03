@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>上游面</string>
+	<string>坝面</string>
+	<string>下游面</string>
+	<string>坝址</string>
+	<string>坝肩</string>
+	<string>廊道</string>
+	<string>溢游面</string>
+	<string>闸墩</string>
+	<string>消能工</string>
+	<string>引水段</string>
+	<string>调压井</string>
+	<string>消能工（输/泄水）</string>
+</array>
+</plist>
