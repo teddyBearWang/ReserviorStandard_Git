@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3C82F560-46D3-4954-8606-C309BE14C920</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ReserviorStandard</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9F245F19E66E6EF76E8CE9B614D96368403F9F6D</key>
+		<string>https://github.com/teddyBearWang/ReserviorStandard_Git.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ReserviorStandard.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9F245F19E66E6EF76E8CE9B614D96368403F9F6D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/teddyBearWang/ReserviorStandard_Git.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9F245F19E66E6EF76E8CE9B614D96368403F9F6D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9F245F19E66E6EF76E8CE9B614D96368403F9F6D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ReserviorStandard_Git</string>
+		</dict>
+	</array>
+</dict>
+</plist>

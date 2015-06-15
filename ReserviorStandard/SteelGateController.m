@@ -1,7 +1,7 @@
 //
 //  SteelGateController.m
 //  ReserviorStandard
-//
+//  ***********大坝钢闸门**************
 //  Created by teddy on 14-10-28.
 //  Copyright (c) 2014年 teddy. All rights reserved.
 //
@@ -15,6 +15,9 @@
 #import "ReportViewController.h"
 
 @interface SteelGateController ()
+{
+    SegtonInstance *_instance;
+}
 
 @end
 
@@ -25,6 +28,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        //创建单列对象
+        _instance = [SegtonInstance sharedTheme];
     }
     return self;
 }
@@ -95,6 +100,12 @@
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:segCtrl];
     self.navigationItem.rightBarButtonItem = rightItem;
+    
+    self.wheatherTextField.text = _instance.weather;//初始化
+    
+    if (_instance.WaterLevel.length != 0) {
+        self.capacityTextField.text = _instance.WaterLevel;
+    }
 }
 
 - (void)initMainView
@@ -216,14 +227,15 @@
     if ([gate.state rangeOfString:@"正常"].location == NSNotFound) {
         self.contentTextView.text = gate.state; //表示若已经标志则显示问题
     } else {
-        self.contentTextView.text = nil; //若是没有，则清空
+        self.contentTextView.text = @"正常"; //若是没有，则清空
     }
     [self rel];
 }
 
 - (IBAction)uploadPreoblemAction:(id)sender
 {
-    
+    //将库水位保存在单例中
+    _instance.WaterLevel = self.capacityTextField.text;
     if (self.numberIDTextField.text.length == 0 || self.capacityTextField.text.length == 0 || self.wheatherTextField.text.length == 0) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"要填的选项不能为空" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alert show];
@@ -244,8 +256,7 @@
     
     NSString *str = [arr componentsJoinedByString:@"$"];
     NSString *dateString = [NSString stringWithFormat:@"%d-%.2d-%.2d",SHAREAPP.remYear,SHAREAPP.remMonth,SHAREAPP.remDay];
-    SegtonInstance *instance = [SegtonInstance sharedTheme];
-    NSString *valeStr = [NSString stringWithFormat:@"%@$%@$%@$%@$%@$%@$%@$%@$%@$%@",dateString,_type,self.numberIDTextField.text,str,instance.userName,instance.userName,instance.idNum,instance.idNum,self.capacityTextField.text,self.wheatherTextField.text];
+    NSString *valeStr = [NSString stringWithFormat:@"%@$%@$%@$%@$%@$%@$%@$%@$%@$%@",dateString,_type,self.numberIDTextField.text,str,_instance.userName,_instance.userName,_instance.idNum,_instance.idNum,self.capacityTextField.text,self.wheatherTextField.text];
     
     NSURL *url = [NSURL URLWithString:WEB_SERVER];
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];

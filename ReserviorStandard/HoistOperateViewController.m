@@ -9,8 +9,12 @@
 #import "HoistOperateViewController.h"
 #import "ASIFormDataRequest.h"
 #import "SVProgressHUD.h"
+#import "SegtonInstance.h"
 
 @interface HoistOperateViewController ()
+{
+    SegtonInstance *_instance;
+}
 
 @end
 
@@ -22,6 +26,8 @@
     if (self) {
         // Custom initialization
         self.title = @"闸门启闭操作记录";
+        _instance = [SegtonInstance sharedTheme];
+       
     }
     return self;
 }
@@ -74,6 +80,10 @@
     [uploadBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [uploadBtn addTarget:self action:@selector(uploadStationAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.bgScrollView addSubview:uploadBtn];
+    
+    if (_instance.WaterLevel.length != 0) {
+        self.reserviorLeveltextField.text = _instance.WaterLevel;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -209,6 +219,7 @@
     if ([self checkTextIsEmupty]) {
         return;
     }
+    _instance.WaterLevel = self.reserviorLeveltextField.text;
     NSString *state = nil;
     NSURL *URL = [NSURL URLWithString:WEB_SERVER];
     if ([[self.stateBtn currentTitle] isEqualToString:@"正常"]) {

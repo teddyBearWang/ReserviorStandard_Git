@@ -240,7 +240,11 @@
     UIView *sView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 290, 200)];
     contextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, 270, 180)];
     contextView.tag = 2001;
-    contextView.text = content;
+    if (content.length == 0) {
+        contextView.text = @"正常";
+    }else{
+        contextView.text = content;
+    }
     contextView.delegate = self;
     [sView addSubview:contextView];
     
@@ -257,7 +261,9 @@
         for (HoistObject *hoist in _contentArray) {
             if ([hoist.idNum intValue] == selectedIndex) {
                 hoist.danger = contextView.text; //保存隐患
-                hoist.isMark = YES;//标记隐患
+                if (![hoist.danger isEqual:@"正常"]) {
+                    hoist.isMark = YES;//标记隐患
+                }
                 [fileArray addObject:hoist]; //保存已经有隐患的
             }
         }

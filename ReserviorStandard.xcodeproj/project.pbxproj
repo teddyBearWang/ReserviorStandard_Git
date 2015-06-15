@@ -810,7 +810,7 @@
 				ORGANIZATIONNAME = teddy;
 				TargetAttributes = {
 					9FC978D419F73F5400B0F461 = {
-						DevelopmentTeam = GGLTBH2LF8;
+						DevelopmentTeam = LNMMM7J8HZ;
 					};
 					9FC978EF19F73F5400B0F461 = {
 						TestTargetID = 9FC978D419F73F5400B0F461;
@@ -1087,7 +1087,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: roger ace (W6A2225E87)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReserviorStandard/ReserviorStandard-Prefix.pch";
 				INFOPLIST_FILE = "ReserviorStandard/ReserviorStandard-Info.plist";
@@ -1097,7 +1097,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c170e487-2b4c-4c20-8c31-74e79e864c95";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1109,7 +1109,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: roger ace (W6A2225E87)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReserviorStandard/ReserviorStandard-Prefix.pch";
 				INFOPLIST_FILE = "ReserviorStandard/ReserviorStandard-Info.plist";
@@ -1119,7 +1119,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c170e487-2b4c-4c20-8c31-74e79e864c95";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

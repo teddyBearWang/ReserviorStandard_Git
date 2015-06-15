@@ -10,6 +10,10 @@
 
 @interface SegtonInstance : NSObject
 
+@property (nonatomic, strong) NSString *WaterLevel;//库水位
+@property (nonatomic, strong) NSString *weather;//天气
+@property (nonatomic, strong) NSString *temperture;//温度
+
 @property (nonatomic, strong) NSMutableArray *userArray; // 巡查人数组
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) NSString *idNum;
