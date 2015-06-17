@@ -89,7 +89,6 @@
     if (![gate.state isEqualToString:@"正常"]) {
         self.contentTextView.text = gate.state;
     }
-    
     NSArray *array = @[@"拍照",@"已上报"];
     UISegmentedControl *segCtrl = [[UISegmentedControl alloc] initWithItems:array];
     segCtrl.segmentedControlStyle = UISegmentedControlStyleBar;

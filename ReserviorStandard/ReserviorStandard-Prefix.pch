@@ -49,7 +49,7 @@ typedef enum KReportedType
     kSecondPowerGateReportedType = 6, // 二级电厂钢闸门
 } KReportedType;
 
-#define WEB_SERVER @"http://122.226.205.102/sfskbzhMobileServ/Data_Ys.ashx"
+#define WEB_SERVER @"http://122.226.205.102/sfskbzhMobileServ/Data_Ys.ashx?"
 #define _AppVer @"1.2"
 
 //#define WEB_LIN_SERVER @"http://115.236.2.245:801/sfskbzhMobileServ/Data_Ys.ashx"

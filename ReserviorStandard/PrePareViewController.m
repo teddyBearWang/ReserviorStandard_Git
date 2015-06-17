@@ -49,6 +49,8 @@
     SegtonInstance *instance = [SegtonInstance sharedTheme];
     self.checkField.text = instance.userName;
     self.orderField.text = instance.userName;
+    self.tempertureField.text = instance.temperture;
+    self.weatherField.text = instance.weather;
     self.checkField.delegate = self;
     self.orderField.delegate = self;
     

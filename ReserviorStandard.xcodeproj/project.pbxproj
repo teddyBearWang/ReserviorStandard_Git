@@ -15,6 +15,7 @@
 		9F0CFA651A1457D300550B7D /* button_green_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F0CFA641A1457D300550B7D /* button_green_big.png */; };
 		9F2D333A1A08A16A006A9A2C /* HoistObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D33391A08A16A006A9A2C /* HoistObject.m */; };
 		9F2D333D1A08EB71006A9A2C /* GateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D333C1A08EB71006A9A2C /* GateObject.m */; };
+		9F4546701B30FB00005FACCC /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F45466F1B30FB00005FACCC /* Weather.m */; };
 		9F51F0EB1A68E3C8000B05A4 /* libSunFlower.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F51F0EA1A68E3C8000B05A4 /* libSunFlower.a */; };
 		9F51F0EE1A68E3F7000B05A4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F51F0ED1A68E3F7000B05A4 /* CoreLocation.framework */; };
 		9F51F0F01A68E407000B05A4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F51F0EF1A68E407000B05A4 /* CoreTelephony.framework */; };
@@ -155,6 +156,8 @@
 		9F2D33391A08A16A006A9A2C /* HoistObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoistObject.m; sourceTree = "<group>"; };
 		9F2D333B1A08EB71006A9A2C /* GateObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GateObject.h; sourceTree = "<group>"; };
 		9F2D333C1A08EB71006A9A2C /* GateObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GateObject.m; sourceTree = "<group>"; };
+		9F45466E1B30FB00005FACCC /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		9F45466F1B30FB00005FACCC /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		9F51F0EA1A68E3C8000B05A4 /* libSunFlower.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSunFlower.a; sourceTree = "<group>"; };
 		9F51F0EC1A68E3D2000B05A4 /* IFlyFlowerCollector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFlyFlowerCollector.h; sourceTree = "<group>"; };
 		9F51F0ED1A68E3F7000B05A4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -642,6 +645,8 @@
 				9FC9790719F73F6C00B0F461 /* MainViewController.h */,
 				9FC9790819F73F6C00B0F461 /* MainViewController.m */,
 				9FC9790919F73F6C00B0F461 /* MainViewController.xib */,
+				9F45466E1B30FB00005FACCC /* Weather.h */,
+				9F45466F1B30FB00005FACCC /* Weather.m */,
 				9FC978EA19F73F5400B0F461 /* Images.xcassets */,
 				9FC978DF19F73F5400B0F461 /* Supporting Files */,
 			);
@@ -961,6 +966,7 @@
 				9FC2942B1A00CA1300870BB6 /* ASIFormDataRequest.m in Sources */,
 				9F5CCD0319F89DD800BC7699 /* HoistViewController.m in Sources */,
 				9FC2942D1A00CA1300870BB6 /* ASIInputStream.m in Sources */,
+				9F4546701B30FB00005FACCC /* Weather.m in Sources */,
 				9FFA935419F9DB56004BBC8C /* LoginViewController.m in Sources */,
 				9FC8181619FF845B00E48B53 /* SteelGateController.m in Sources */,
 				9FBBE3B51A021B1F0027798E /* ReportedListViewController.m in Sources */,
@@ -1086,7 +1092,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: roger ace (W6A2225E87)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: roger ace (W6A2225E87)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReserviorStandard/ReserviorStandard-Prefix.pch";
@@ -1108,7 +1114,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: roger ace (W6A2225E87)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: roger ace (W6A2225E87)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReserviorStandard/ReserviorStandard-Prefix.pch";

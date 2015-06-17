@@ -10,6 +10,9 @@
 #import "MainViewController.h"
 #import "LoginViewController.h"
 #import "IFlyFlowerCollector.h"
+#import "Weather.h"
+#import "SegtonInstance.h"
+#import "ASIFormDataRequest.h"
 
 @implementation AppDelegate
 @synthesize remDay = _remDay;
@@ -23,7 +26,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [IFlyFlowerCollector SetAppid:@"54b8aacf"];
+    //科大世勋的语音包
+   // [IFlyFlowerCollector SetAppid:@"54b8aacf"];
+    //获取当时的天气
+    [self getCurrentWeather];
     
     //隐藏statusBar
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
@@ -32,9 +38,8 @@
     LoginViewController *loginCtrl = [[LoginViewController alloc] init];
     UINavigationController *navigtion = [[UINavigationController alloc] initWithRootViewController:loginCtrl];
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-      //  navigtion.navigationBar.barTintColor = [UIColor colorWithRed:62/255.0 green:172/255.0 blue:247/255.0 alpha:1.0f];
         navigtion.navigationBar.barTintColor = [UIColor colorWithRed:103/255.0 green:188/255.0 blue:223/255.0 alpha:1.0];
-        navigtion.navigationBar.tintColor = [UIColor whiteColor];
+        navigtion.navigationBar.tintColor = [UIColor whiteColor];//返回按钮为白色
         //ios 7.0的系统
         navigtion.navigationBar.translucent = NO;//表示颜色不模糊
     }else{
@@ -58,6 +63,30 @@
     self.remHour = [dateCom hour];
     self.remMinute = [dateCom minute];
     self.remSecond = [dateCom second];
+}
+
+- (void)getCurrentWeather
+{
+    NSURL *url = [NSURL URLWithString:WEB_SERVER];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:@"GetWeather" forKey:@"t"];
+    
+    SegtonInstance *instance = [SegtonInstance sharedTheme];
+    [request setCompletionBlock:^{
+        //完成
+        if (request.responseStatusCode == 200) {
+            NSArray *arr = [NSJSONSerialization JSONObjectWithData:request.responseData options:NSJSONReadingMutableContainers error:nil];
+            NSDictionary *dic = [arr lastObject];
+            instance.weather = [dic objectForKey:@"Weather"];
+            instance.temperture = [dic objectForKey:@"temperature"];
+        }
+    }];
+    [request setFailedBlock:^{
+        //失败
+        instance.weather = @"暂无";
+        instance.temperture = @"暂无";
+    }];
+    [request startAsynchronous];
 }
 
 //禁止横屏
